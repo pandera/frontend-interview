@@ -26,18 +26,10 @@ We will assume you have node installed and configured locally and an IDE of your
 3. Run `grunt debug`
 4. Navigate to `localhost:9019`
 
-:exclamation: 
+>:exclamation: In order to build new features, feel free to install your favorite dependencies.  Just make sure they are included in the appropriate json files for future use. 
 
->In order to build new features, feel free to install your favorite dependencies.  Just make sure they are included in the appropriate json files for future use.
+>:exclamation: All the mock data needed is included in the project with helper code to access it.
 
-:exclamation: 
+>:key: This application is for TV sized screens so ensure you are building UI with responsiveness is mind. 
 
->All the mock data needed is included in the project with helper code to access it.
-
-:key: 
-
->This application is for TV sized screens so ensure you are building UI with responsiveness is mind.
-
-:thumbsup: 
-
->This project includes unit tests.  TDD practices get bonus points!!!
+>:thumbsup: This project includes unit tests.  TDD practices receive bonus points!!!
