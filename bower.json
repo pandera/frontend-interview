@@ -1,0 +1,23 @@
+{
+  "name": "revcast",
+  "description": "",
+  "main": "index.html",
+  "authors": [
+    "Daniel Moore <daniel.moore@revapp.io>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "html5-boilerplate": "^5.3.0"
+  },
+  "devDependencies": {
+    "angular": "^1.6.1"
+  }
+}

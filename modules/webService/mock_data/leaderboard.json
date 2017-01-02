@@ -1,0 +1,686 @@
+[
+	{
+		"name":"Aaron Alvarez",
+		"image":"./assets/avatars/aaronalvarez400x400.png",
+		"teamName":"Southwest",
+		"rank": 1,
+		"previousRank": 3,
+		"totalPoints": 1090,
+		"contribution": 10.5,
+		"metrics":[{
+			"name": "Sales",
+			"points": 720,
+			"percent": 90,
+			"teamAverage": 521
+			}, {
+			"name": "Leads",
+			"points": 98,
+			"percent": 65,
+			"teamAverage": 77
+			}, {
+			"name": "Calls",
+			"points": 136,
+			"percent": 85,
+			"teamAverage": 94
+			}, {
+			"name": "Referrals",
+			"points": 102,
+			"percent": 68,
+			"teamAverage": 82
+			}, {
+			"name": "Other",
+			"points": 34,
+			"percent": 45,
+			"teamAverage": 30
+			}
+		]
+	},
+	{
+		"name":"Jenny Esposito",
+		"image":"./assets/avatars/jennyesposito400x400.png",
+		"teamName":"Northeast",
+		"rank": 2,
+		"previousRank": 1,
+		"totalPoints": 1037,
+		"contribution": 10.5,
+		"metrics":[{
+			"name": "Sales",
+			"points": 630,
+			"percent": 79,
+			"teamAverage": 521
+			}, {
+			"name": "Leads",
+			"points": 110,
+			"percent": 73,
+			"teamAverage": 77
+			}, {
+			"name": "Calls",
+			"points": 156,
+			"percent": 98,
+			"teamAverage": 94
+			}, {
+			"name": "Referrals",
+			"points": 98,
+			"percent": 65,
+			"teamAverage": 82
+			}, {
+			"name": "Other",
+			"points": 43,
+			"percent": 57,
+			"teamAverage": 30
+			}
+		]
+	},
+	{
+		"name":"Thomas Sims",
+		"image":"./assets/avatars/thomassims400x400.png",
+		"teamName":"Central",
+		"rank": 3,
+		"previousRank": 7,
+		"totalPoints": 1022,
+		"contribution": 9.8,
+		"metrics":[{
+			"name": "Sales",
+			"points": 625,
+			"percent": 78,
+			"teamAverage": 521
+			}, {
+			"name": "Leads",
+			"points": 86,
+			"percent": 57,
+			"teamAverage": 77
+			}, {
+			"name": "Calls",
+			"points": 145,
+			"percent": 91,
+			"teamAverage": 94
+			}, {
+			"name": "Referrals",
+			"points": 110,
+			"percent": 73,
+			"teamAverage": 82
+			}, {
+			"name": "Other",
+			"points": 56,
+			"percent": 75,
+			"teamAverage": 30
+			}
+		]
+	},
+	{
+		"name":"Joel Grant",
+		"image":"./assets/avatars/joelgrant400x400.png",
+		"teamName":"Northwest",
+		"rank": 4,
+		"previousRank": 4,
+		"totalPoints": 948,
+		"contribution": 9.1,
+		"metrics":[{
+			"name": "Sales",
+			"points": 610,
+			"percent": 76,
+			"teamAverage": 521
+			}, {
+			"name": "Leads",
+			"points": 92,
+			"percent": 61,
+			"teamAverage": 77
+			}, {
+			"name": "Calls",
+			"points": 126,
+			"percent": 79,
+			"teamAverage": 94
+			}, {
+			"name": "Referrals",
+			"points": 97,
+			"percent": 65,
+			"teamAverage": 82
+			}, {
+			"name": "Other",
+			"points": 23,
+			"percent": 31,
+			"teamAverage": 30
+			}
+		]
+	},
+	{
+		"name":"Karl Olufsen",
+		"image":"./assets/avatars/karlolunsen400x400.png",
+		"teamName":"Southwest",
+		"rank": 5,
+		"previousRank": 9,
+		"totalPoints": 931,
+		"contribution": 8.9,
+		"metrics":[{
+			"name": "Sales",
+			"points": 597,
+			"percent": 75,
+			"teamAverage": 521
+			}, {
+			"name": "Leads",
+			"points": 102,
+			"percent": 68,
+			"teamAverage": 77
+			}, {
+			"name": "Calls",
+			"points": 98,
+			"percent": 61,
+			"teamAverage": 94
+			}, {
+			"name": "Referrals",
+			"points": 99,
+			"percent": 66,
+			"teamAverage": 82
+			}, {
+			"name": "Other",
+			"points": 35,
+			"percent": 47,
+			"teamAverage": 30
+			}
+		]
+	},
+	{
+		"name":"Christian Bell",
+		"image":"./assets/avatars/christianbell400x400.png",
+		"teamName":"Southeast",
+		"rank": 6,
+		"previousRank": 5,
+		"totalPoints": 892,
+		"contribution": 8.6,
+		"metrics":[{
+			"name": "Sales",
+			"points": 565,
+			"percent": 71,
+			"teamAverage": 521
+			}, {
+			"name": "Leads",
+			"points": 86,
+			"percent": 57,
+			"teamAverage": 77
+			}, {
+			"name": "Calls",
+			"points": 92,
+			"percent": 58,
+			"teamAverage": 94
+			}, {
+			"name": "Referrals",
+			"points": 102,
+			"percent": 68,
+			"teamAverage": 82
+			}, {
+			"name": "Other",
+			"points": 47,
+			"percent": 63,
+			"teamAverage": 30
+			}
+		]
+	},
+	{
+		"name":"Tamara Butcher",
+		"image":"./assets/avatars/tamarabutcher400x400.png",
+		"teamName":"Central",
+		"rank": 7,
+		"previousRank": 13,
+		"totalPoints": 875,
+		"contribution": 8.4,
+		"metrics":[{
+			"name": "Sales",
+			"points": 623,
+			"percent": 78,
+			"teamAverage": 521
+			}, {
+			"name": "Leads",
+			"points": 75,
+			"percent": 50,
+			"teamAverage": 77
+			}, {
+			"name": "Calls",
+			"points": 68,
+			"percent": 43,
+			"teamAverage": 94
+			}, {
+			"name": "Referrals",
+			"points": 67,
+			"percent": 45,
+			"teamAverage": 82
+			}, {
+			"name": "Other",
+			"points": 42,
+			"percent": 56,
+			"teamAverage": 30
+			}
+		]
+	},
+	{
+		"name":"Kelly Jackson",
+		"image":"./assets/avatars/kellyjackson400x400.png",
+		"teamName":"Northeast",
+		"rank": 8,
+		"previousRank": 19,
+		"totalPoints": 873,
+		"contribution": 8.4,
+		"metrics":[{
+			"name": "Sales",
+			"points": 598,
+			"percent": 75,
+			"teamAverage": 521
+			}, {
+			"name": "Leads",
+			"points": 87,
+			"percent": 58,
+			"teamAverage": 77
+			}, {
+			"name": "Calls",
+			"points": 78,
+			"percent": 49,
+			"teamAverage": 94
+			}, {
+			"name": "Referrals",
+			"points": 76,
+			"percent": 51,
+			"teamAverage": 82
+			}, {
+			"name": "Other",
+			"points": 34,
+			"percent": 45,
+			"teamAverage": 30
+			}
+		]
+	},
+	{
+		"name":"Arti Patel",
+		"image":"./assets/avatars/artipatel400x400.png",
+		"teamName":"Northwest",
+		"rank": 9,
+		"previousRank": 16,
+		"totalPoints": 870,
+		"contribution": 8.4,
+		"metrics":[{
+			"name": "Sales",
+			"points": 575,
+			"percent": 72,
+			"teamAverage": 521
+			}, {
+			"name": "Leads",
+			"points": 98,
+			"percent": 65,
+			"teamAverage": 77
+			}, {
+			"name": "Calls",
+			"points": 79,
+			"percent": 49,
+			"teamAverage": 94
+			}, {
+			"name": "Referrals",
+			"points": 87,
+			"percent": 58,
+			"teamAverage": 82
+			}, {
+			"name": "Other",
+			"points": 31,
+			"percent": 41,
+			"teamAverage": 30
+			}
+		]
+	},
+	{
+		"name":"Eva Cortez",
+		"image":"./assets/avatars/evacortez400x400.png",
+		"teamName":"Central",
+		"rank": 10,
+		"previousRank": 10,
+		"totalPoints": 852,
+		"contribution": 8.2,
+		"metrics":[{
+			"name": "Sales",
+			"points": 586,
+			"percent": 73,
+			"teamAverage": 521
+			}, {
+			"name": "Leads",
+			"points": 65,
+			"percent": 43,
+			"teamAverage": 77
+			}, {
+			"name": "Calls",
+			"points": 85,
+			"percent": 53,
+			"teamAverage": 94
+			}, {
+			"name": "Referrals",
+			"points": 87,
+			"percent": 58,
+			"teamAverage": 82
+			}, {
+			"name": "Other",
+			"points": 29,
+			"percent": 39,
+			"teamAverage": 30
+			}
+		]
+	},
+	{
+		"name":"Blake Crestwell",
+		"image":"./assets/avatars/blakecrestwell400x400.png",
+		"teamName":"Northeast",
+		"rank": 11,
+		"previousRank": 17,
+		"totalPoints": 851,
+		"contribution": 8.2,
+		"metrics":[{
+			"name": "Sales",
+			"points": 598,
+			"percent": 75,
+			"teamAverage": 521
+			}, {
+			"name": "Leads",
+			"points": 78,
+			"percent": 52,
+			"teamAverage": 77
+			}, {
+			"name": "Calls",
+			"points": 78,
+			"percent": 49,
+			"teamAverage": 94
+			}, {
+			"name": "Referrals",
+			"points": 69,
+			"percent": 46,
+			"teamAverage": 82
+			}, {
+			"name": "Other",
+			"points": 28,
+			"percent": 37,
+			"teamAverage": 30
+			}
+		]
+	},
+	{
+		"name":"Cindy Yang",
+		"image":"./assets/avatars/cindyyang400x400.png",
+		"teamName":"Southeast",
+		"rank": 12,
+		"previousRank": 15,
+		"totalPoints": 849,
+		"contribution": 8.2,
+		"metrics":[{
+			"name": "Sales",
+			"points": 526,
+			"percent": 66,
+			"teamAverage": 521
+			}, {
+			"name": "Leads",
+			"points": 98,
+			"percent": 65,
+			"teamAverage": 77
+			}, {
+			"name": "Calls",
+			"points": 95,
+			"percent": 59,
+			"teamAverage": 94
+			}, {
+			"name": "Referrals",
+			"points": 92,
+			"percent": 61,
+			"teamAverage": 82
+			}, {
+			"name": "Other",
+			"points": 38,
+			"percent": 51,
+			"teamAverage": 30
+			}
+		]
+	},
+	{
+		"name":"Malik Hassan",
+		"image":"./assets/avatars/malikhassan400x400.png",
+		"teamName":"Southwest",
+		"rank": 13,
+		"previousRank": 11,
+		"totalPoints": 719,
+		"contribution": 6.9,
+		"metrics":[{
+			"name": "Sales",
+			"points": 530,
+			"percent": 66,
+			"teamAverage": 521
+			}, {
+			"name": "Leads",
+			"points": 29,
+			"percent": 19,
+			"teamAverage": 77
+			}, {
+			"name": "Calls",
+			"points": 82,
+			"percent": 51,
+			"teamAverage": 94
+			}, {
+			"name": "Referrals",
+			"points": 56,
+			"percent": 37,
+			"teamAverage": 82
+			}, {
+			"name": "Other",
+			"points": 22,
+			"percent": 29,
+			"teamAverage": 30
+			}
+		]
+	},
+	{
+		"name":"Troy Sampson",
+		"image":"./assets/avatars/troysampson400x400.png",
+		"teamName":"Northeast",
+		"rank": 14,
+		"previousRank": 18,
+		"totalPoints": 702,
+		"contribution": 6.7,
+		"metrics":[{
+			"name": "Sales",
+			"points": 480,
+			"percent": 60,
+			"teamAverage": 521
+			}, {
+			"name": "Leads",
+			"points": 67,
+			"percent": 45,
+			"teamAverage": 77
+			}, {
+			"name": "Calls",
+			"points": 69,
+			"percent": 43,
+			"teamAverage": 94
+			}, {
+			"name": "Referrals",
+			"points": 67,
+			"percent": 45,
+			"teamAverage": 82
+			}, {
+			"name": "Other",
+			"points": 19,
+			"percent": 25,
+			"teamAverage": 30
+			}
+		]
+	},
+	{
+		"name":"Sonja Frazer",
+		"image":"./assets/avatars/sonjafrazer400x400.png",
+		"teamName":"Central",
+		"rank": 15,
+		"previousRank": 2,
+		"totalPoints": 687,
+		"contribution": 6.6,
+		"metrics":[{
+			"name": "Sales",
+			"points": 417,
+			"percent": 52,
+			"teamAverage": 521
+			}, {
+			"name": "Leads",
+			"points": 65,
+			"percent": 43,
+			"teamAverage": 77
+			}, {
+			"name": "Calls",
+			"points": 98,
+			"percent": 61,
+			"teamAverage": 94
+			}, {
+			"name": "Referrals",
+			"points": 89,
+			"percent": 59,
+			"teamAverage": 82
+			}, {
+			"name": "Other",
+			"points": 18,
+			"percent": 24,
+			"teamAverage": 30
+			}
+		]
+	},
+	{
+		"name":"Caesar Liu",
+		"image":"./assets/avatars/caesarliu400x400.png",
+		"teamName":"Northwest",
+		"rank": 16,
+		"previousRank": 8,
+		"totalPoints": 604,
+		"contribution": 5.8,
+		"metrics":[{
+			"name": "Sales",
+			"points": 320,
+			"percent": 40,
+			"teamAverage": 521
+			}, {
+			"name": "Leads",
+			"points": 87,
+			"percent": 58,
+			"teamAverage": 77
+			}, {
+			"name": "Calls",
+			"points": 102,
+			"percent": 64,
+			"teamAverage": 94
+			}, {
+			"name": "Referrals",
+			"points": 76,
+			"percent": 51,
+			"teamAverage": 82
+			}, {
+			"name": "Other",
+			"points": 19,
+			"percent": 25,
+			"teamAverage": 30
+			}
+		]
+	},
+	{
+		"name":"Milo Stevenson",
+		"image":"./assets/avatars/milostevenson400x400.png",
+		"teamName":"Southeast",
+		"rank": 17,
+		"previousRank": 14,
+		"totalPoints": 601,
+		"contribution": 5.8,
+		"metrics":[{
+			"name": "Sales",
+			"points": 390,
+			"percent": 49,
+			"teamAverage": 521
+			}, {
+			"name": "Leads",
+			"points": 67,
+			"percent": 45,
+			"teamAverage": 77
+			}, {
+			"name": "Calls",
+			"points": 78,
+			"percent": 49,
+			"teamAverage": 94
+			}, {
+			"name": "Referrals",
+			"points": 45,
+			"percent": 30,
+			"teamAverage": 82
+			}, {
+			"name": "Other",
+			"points": 21,
+			"percent": 28,
+			"teamAverage": 30
+			}
+		]
+	},
+	{
+		"name":"Stephanie Brown",
+		"image":"./assets/avatars/stephaniebrown400x400.png",
+		"teamName":"Northeast",
+		"rank": 18,
+		"previousRank": 12,
+		"totalPoints": 594,
+		"contribution": 5.7,
+		"metrics":[{
+			"name": "Sales",
+			"points": 350,
+			"percent": 44,
+			"teamAverage": 521
+			}, {
+			"name": "Leads",
+			"points": 56,
+			"percent": 37,
+			"teamAverage": 77
+			}, {
+			"name": "Calls",
+			"points": 89,
+			"percent": 56,
+			"teamAverage": 94
+			}, {
+			"name": "Referrals",
+			"points": 89,
+			"percent": 59,
+			"teamAverage": 82
+			}, {
+			"name": "Other",
+			"points": 10,
+			"percent": 13,
+			"teamAverage": 30
+			}
+		]
+	},
+	{
+		"name":"Kenneth McIntyre",
+		"image":"./assets/avatars/kennethmcintyre400x400.png",
+		"teamName":"Central",
+		"rank": 19,
+		"previousRank": 6,
+		"totalPoints": 572,
+		"contribution": 5.5,
+		"metrics":[{
+			"name": "Sales",
+			"points": 370,
+			"percent": 46,
+			"teamAverage": 521
+			}, {
+			"name": "Leads",
+			"points": 39,
+			"percent": 26,
+			"teamAverage": 77
+			}, {
+			"name": "Calls",
+			"points": 62,
+			"percent": 39,
+			"teamAverage": 94
+			}, {
+			"name": "Referrals",
+			"points": 78,
+			"percent": 52,
+			"teamAverage": 82
+			}, {
+			"name": "Other",
+			"points": 23,
+			"percent": 31,
+			"teamAverage": 30
+			}
+		]
+	}
+]
