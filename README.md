@@ -1,6 +1,6 @@
 # REV Frontend Interview
 
-Thank you for your interest in a front end developer position at [REVApp](http://revapp.io).  This technical assessment is 1 hour in length and provides us with information regrading your ability to:
+Thank you for your interest in a front end developer position at [REVApp](http://revapp.io).  This technical assessment is 1 hour in length and provides us with information regarding your ability to:
 
 - Manage branches with Git
 - Setup a local development environment
