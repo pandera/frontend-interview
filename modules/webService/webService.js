@@ -11,11 +11,12 @@
 		var APIManager = {};
 
 		APIManager.loadLeaderboardData = function(vertical){
-			if(vertical === ""){
-				return $http.get("./modules/webService/mock_data/leaderboard.json");
-			}else{
-				return $http.get("./modules/webService/mock_data/leaderboard_"+vertical+".json");
-			}
+            return $http.get("./modules/webService/mock_data/leaderboard.json");
+			//if(vertical === ""){
+			//	return $http.get("./modules/webService/mock_data/leaderboard.json");
+			//}else{
+			//	return $http.get("./modules/webService/mock_data/leaderboard_"+vertical+".json");
+			//}
 		};
 
 		APIManager.loadChatterData = function(vertical){

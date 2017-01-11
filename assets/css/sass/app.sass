@@ -11,15 +11,795 @@ $blue-color: #2980B9
 $red-color: #C0392B
 
 @font-face
-	font-family: "Roboto-Light"
-	src: url('../../fonts/Roboto-Light-webfont.eot')
-	src: local('../../fonts/Roboto-Light-webfont')
-	src: url('../../fonts/Roboto-Light-webfont.svg#Roboto-Light') format('svg')
-	src: url('../../fonts/Roboto-Light-webfont.otf') format('opentype')
+  font-family: "Roboto-Light"
+  src: url('../../fonts/Roboto-Light-webfont.eot')
+  src: local('../../fonts/Roboto-Light-webfont')
+  src: url('../../fonts/Roboto-Light-webfont.svg#Roboto-Light') format('svg')
+  src: url('../../fonts/Roboto-Light-webfont.otf') format('opentype')
 
 @font-face
-	font-family: "Roboto-Regular"
-	src: url('../../fonts/Roboto-Regular-webfont.eot')
-	src: local('../../fonts/Roboto-Regular-webfont')
-	src: url('../../fonts/Roboto-Regular-webfont.svg#Roboto-Regular') format('svg')
-	src: url('../../fonts/Roboto-Regular-webfont.otf') format('opentype')
+  font-family: "Roboto-Regular"
+  src: url('../../fonts/Roboto-Regular-webfont.eot')
+  src: local('../../fonts/Roboto-Regular-webfont')
+  src: url('../../fonts/Roboto-Regular-webfont.svg#Roboto-Regular') format('svg')
+  src: url('../../fonts/Roboto-Regular-webfont.otf') format('opentype')
+$blue: #0000CC
+$green: #00CC00
+
+.rev-login-container
+  height: 75vh
+  width: 100%
+  margin-top: 10vh
+  border: 2px solid $grey-color
+
+  .rev-logo-wrapper
+    height: 25vh
+    margin-top: 2.5vh
+    width: 90%
+    margin-left: 5%
+
+    #rev-cast-logo
+      height: 100%
+      width: 100%
+
+  .rev-cast-login-wrapper
+    width: 90%
+    margin-left: 5%
+    height: 10vh
+    margin-top: 2.5vh
+
+    .rev-cast-login
+      height: 100%
+      width: 30%
+      margin: 0 auto
+      font-size: 4vh
+      font-weight: 100
+      text-align: center
+      vertical-align: center
+
+  #rev-cast-login-form
+    width: 80%
+    margin-left: 10%
+    height: 30vh
+
+    &>input
+      -webkit-appearance: none
+      -moz-appearance: none
+      outline: none
+      box-shadow: none !important
+      width: 100%
+      height: 7vh
+      margin-top: 2vh
+      border-width: 0
+      border: none
+      border-bottom: 3px solid $grey-color
+      text-align: center
+      font-size: 3vh
+
+      &:-webkit-autofill,
+      &:-webkit-autofill:hover,
+      &:-webkit-autofill:focus,
+      &:-webkit-autofill:active
+        transition: background-color 5000s ease-in-out 0s
+        -webkit-text-fill-color: $grey-text
+
+      &::-webkit-input-placeholder
+        text-align: center
+
+    &>button
+      -webkit-appearance: none
+      -moz-appearance: none
+      border-width: 0
+      border: none
+      width: 100%
+      height: 7vh
+      margin-top: 2vh
+      border-radius: 5px
+      background: $grey-text
+      color: $grey-color
+      box-shadow: 0px 2px 5px $oslo-grey
+
+  .rev-cast-login-error
+    color: red
+    text-align: center
+
+  .rev-cast-login-msg
+    text-align: center
+
+@keyframes marquee
+  0%
+    left: 100%
+  100%
+    left: -200%
+
+@-webkit-keyframes marquee
+  0%
+    left: 100%
+  100%
+    left: -200%
+
+body
+  width: 100%
+  height: 100%
+  font-family: 'Roboto', sans-serif
+  font-weight: 100
+  color: $grey-text
+  position: relative
+  overflow: hidden
+
+  .rev-loading-overlay
+    position: absolute
+    background: #ffffff
+    opacity: .75
+    height: 100%
+    width: 100%
+    top: 0
+    left: 0
+    z-index: 10
+
+    .overlay-text-wrapper
+      width: 100%
+      height: 100%
+      position: relative
+
+      .overlay-text
+        width: 20%
+        height: 20vh
+        position: absolute
+        left: 40%
+        top: 30vh
+
+        .rev-gif-wrapper
+          position: relative
+          width: 100%
+          height: 100%
+
+          img
+            position: absolute
+            width: 68%
+            left: 16%
+
+  .rev-cursor
+    cursor: all-scroll
+
+  #rev-header-wrapper
+    background: $header-background
+    width: $full-width
+    height: $header-height
+    border-bottom: 2px solid $grey-text
+
+    .rev-section-wrapper
+      width: 90%
+      margin: 0 auto
+
+      &>div
+        display: inline-block
+
+      .rev-title-wrapper
+        height: $header-height
+        width: 63%
+
+        .rev-logo-wrapper
+
+          img
+            max-width: 30vh
+            height: 9vh
+            margin-top: 4.5vh
+            vertical-align: bottom
+
+          .rev-title
+            font-size: 4vh
+
+            div
+              display: inline-block
+              margin-left: 1em
+
+      .rev-time-wrapper
+        height: $header-height
+        width: 25%
+
+        .rev-counter-wrapper
+
+          &>div
+            display: inline-block
+
+          .rev-time-title-wrapper
+            font-size: 2.5vh
+
+            &>div
+              padding-top: 9.25vh
+              padding-right: 1em
+
+          .rev-time-counter-wrapper
+            position: absolute
+            width: 5%
+            height: 100%
+
+            &.first
+              right: 19%
+
+            &.second
+              right: 12%
+
+            &.third
+              right: 5%
+
+            .title
+              width: 100%
+              text-align: center
+              font-weight: 400
+              margin-top: 4vh
+              font-size: 2vh
+
+            .rev-circle
+              background: $grey-text
+              color: #ffffff
+              margin: 1vh auto
+              height: 6.5vh
+              width: 6.5vh
+              border-radius: 7em
+
+              .number-wrapper
+                font-size: 4vh
+                font-weight: 100
+                margin: 1vh auto
+                width: 100%
+                line-height: 6.5vh
+                text-align: center
+      #rev-logout
+        cursor: pointer
+        position: fixed
+        right: 0
+        color: #d5d5d5
+
+        &:hover
+          color: $grey-text
+
+  #rev-body-wrapper
+    background: $body-background
+    width: $full-width
+    height: 72.5vh
+
+    .rev-back-button
+      position: absolute
+      margin-left: .5%
+      margin-top: 4vh
+      height: 7vh
+      width: 7vh
+      background: #ffffff
+      border-radius: 7vh
+      border: 2px solid $grey-text
+      cursor: pointer
+
+      &>i
+        line-height: 6.5vh
+        font-size: 6vh
+        color: $grey-text
+
+    .rev-focus-wrapper
+      position: relative
+      height: 15vh
+      background: transparent
+      width: 90%
+      margin: -7.5vh auto
+
+      .rev-focus-listview
+        position: absolute
+        height: 12vh
+        background: #ffffff
+        top: 1.5vh
+        width: 42.5%
+        border: 2px solid $grey-text
+
+        &:hover
+          background: $grey-color
+          cursor: pointer
+
+        .focus-detail-wrapper
+          height: 6vh
+          width: 90%
+          margin-top: 3vh
+          margin-left: 5%
+
+          &>div
+            display: inline-block
+            color: #000000
+            font-size: 3.5vh
+            font-weight: 400
+            position: absolute
+            line-height: 6vh
+
+            &.rev-focus-detail-image
+              position: absolute
+              height: 6vh
+              background: #ffffff
+              top: 3vh
+              width: 6vh
+              left: 14%
+              border-radius: 8em
+
+            &.name
+              left: 30%
+
+            &.points
+              right: 5%
+
+      .rev-focus-image
+        position: absolute
+        height: 15vh
+        background: #ffffff
+        top: 0
+        width: 15vh
+        left: 50%
+        border-radius: 8em
+
+      .rev-focus-details
+        position: absolute
+        background: #ffffff
+        height: 7vh
+        right: 0
+        width: 38%
+        border: 2px solid $grey-text
+        top: 4vh
+
+        &>div
+          display: inline-block
+
+        .title-wrapper
+          height: 100%
+          width: 55%
+          float: left
+
+          &>div
+            color: #000000
+            font-size: 3vh
+            font-weight: 300
+            margin-left: 3.5%
+            letter-spacing: 1px
+            line-height: 7vh
+
+        .delta-wrapper
+          background: $green-color
+          color: #ffffff
+          height: 100%
+          width: 45%
+          float: right
+
+          &>div
+            display: inline-block
+
+          .rank-wrapper
+            font-size: 4vh
+            font-weight: 400
+            width: 45%
+            float: left
+            height: 100%
+
+            &>div
+              margin-left: 12.5%
+              line-height: 7vh
+              font-size: 3vh
+              font-weight: 300
+
+          .change-box
+            width: 55%
+            height: 100%
+            float: right
+
+            &>div
+              background: #ffffff
+              height: 4vh
+              width: 80%
+              margin-top: 1.5vh
+
+              &>div
+                display: inline-block
+                color: $green-color
+                line-height: 4vh
+
+              .up-arrow
+                height: 0
+                width: 0
+                border-left: 1vh solid transparent
+                border-right: 1vh  solid transparent
+                border-bottom: 1vh solid $green-color
+                position: absolute
+                top: 40%
+                margin-left: 2%
+
+              .down-arrow
+                height: 0
+                width: 0
+                border-left: 1vh solid transparent
+                border-right: 1vh  solid transparent
+                border-top: 1vh solid $red-color
+                position: absolute
+                top: 50%
+                margin-left: 2%
+
+              .rank
+                font-size: 3vh
+                float: right
+                font-weight: 400
+                padding-right: 20%
+
+                &.rev-down
+                  color: $red-color
+
+    .rev-details-wrapper
+      width: 90%
+      margin: 0 auto
+      height: 55.5vh
+      margin-top: 7.5vh
+
+      .rev-leaderboard-wrapper
+        width: 40%
+        height: 100%
+        background: #ffffff
+        display: inline-block
+
+        .rev-leaderboard-entry
+          width: 90%
+          height: 8vh
+          background: #ffffff
+          margin: 0 auto
+
+          &:hover
+            background: $grey-color
+            cursor: pointer
+
+            .rev-entry-wrapper>div
+              color: #000000
+
+          .rev-entry-wrapper
+            position: relative
+            height: 6vh
+            width: 90%
+            margin-left: 5%
+            margin-top: 1.5vh
+
+            &>div
+              display: inline-block
+              color: #BDC3C7
+              font-size: 3vh
+              font-weight: 400
+              line-height: 6vh
+              position: absolute
+
+              &.rev-entry-detail-image
+                height: 4vh
+                background: #ffffff
+                top: 1vh
+                width: 4vh
+                left: 11%
+                border-radius: 8em
+
+              &.name
+                left: 25%
+
+              &.points
+                right: 0%
+
+        .rev-control-wrapper
+          background: $grey-text
+          position: absolute
+          height: 8vh
+          width: 40%
+          bottom: 0
+          -webkit-transition: all .5s ease-in-out
+          -moz-transition: all .5s ease-in-out
+          -o-transition: all .5s ease-in-out
+
+          &.show
+            cursor: default
+            opacity: .75
+            bottom: 10vh
+            -webkit-transition: all .5s ease-in-out
+            -moz-transition: all .5s ease-in-out
+            -o-transition: all .5s ease-in-out
+
+          .rev-controls
+            height: 100%
+            width: 100%
+
+            &>div
+              color: #ffffff
+              display: inline-block
+
+              &.rev-control-label
+                height: 100%
+                width: 30%
+                margin-left: 5%
+
+                &>div
+                  font-size: 3vh
+                  line-height: 4vh
+                  margin-top: 2vh
+
+              &.rev-control-btns
+                float: right
+                background: $blue-color
+                width: 30%
+
+                .rev-goto-btn
+                  display: inline-block
+                  color: $grey-text
+                  cursor: pointer
+                  background: #ffffff
+                  width: 10%
+                  height: 4vh
+                  margin-top: 2vh
+                  position: absolute
+
+                  &:first-child
+                    right: 20%
+
+                  &:last-child
+                    right: 5%
+
+                  div
+                    text-transform: uppercase
+                    width: 100%
+                    text-align: center
+
+                    &.rev-up-arrow-grey
+                      height: 0
+                      width: 0
+                      border-left: 10px solid transparent
+                      border-right: 10px solid transparent
+                      border-bottom: 10px solid $grey-text
+                      position: absolute
+                      left: 50%
+                      margin-left: -10px
+
+                    &.rev-down-arrow-grey
+                      height: 0
+                      width: 0
+                      border-left: 10px solid transparent
+                      border-right: 10px solid transparent
+                      border-top: 10px solid $grey-text
+                      position: absolute
+                      left: 50%
+                      margin-left: -10px
+
+      .rev-metrics-wrapper
+        position: relative
+        display: inline-block
+        height: 100%
+        width: 55%
+        float: right
+
+        .rev-metrics-table-wrapper
+          position: absolute
+          height: 55.5vh
+          width: 79%
+
+          .rev-metrics-table
+            height: 51.5vh
+            width: 81%
+            margin-left: 9%
+            margin-top: 4vh
+
+            .rev-table-header
+              position: relative
+              width: 80%
+              height: 3vh
+
+              &>div
+                font-weight: 100
+                font-size: 1.5vh
+                display: inline-block
+                position: absolute
+                white-space: nowrap
+
+                &:first-child
+                  left: 5%
+
+                &:nth-child(2)
+                  left: 68%
+
+                &:last-child
+                  left: 96%
+
+            .rev-table-row
+              position: relative
+              background: $grey-color
+              width: 70%
+              height: 6vh
+
+              &:not(.first)
+                margin-top: 1.5vh
+
+              .rev-metric-bar
+                position: absolute
+                background: $green-color
+                height: 100%
+                width: 50%
+
+              &>div:not(.rev-metric-bar)
+                display: inline-block
+                position: absolute
+
+                &>div
+                  position: absolute
+
+                &.metric-label-box
+                  left: 5%
+
+                &.metric-points-box
+                  left: 75%
+
+                &.metric-avg-box
+                  left: 105%
+
+                &>.box-wrapper
+                  height: 3.5vh
+                  margin-top: 1.25vh
+                  background: #ffffff
+                  border: 1px solid $grey-text
+                  border-radius: 2px
+                  white-space: nowrap
+
+                  &.no-border
+                    border: none
+
+                    &>div
+                      color: $grey-text
+
+                  &>div
+                    color: #000000
+                    font-size: 1.5vh
+                    font-weight: 400
+                    margin: 0 15px
+                    line-height: 3.5vh
+
+            .rev-table-footer
+              position: relative
+              height: 8vh
+              width: 80%
+              margin-top: 1.25vh
+
+              &>div
+                display: inline-block
+                position: absolute
+                font-weight: 400
+                font-size: 3vh
+                margin-top: 1vh
+                color: #000000
+
+                &:first-child
+                  left: 5%
+
+                &:nth-child(2)
+                  left: 66%
+
+                &:last-child
+                  font-size: 2.5vh
+                  margin-top: 1.25vh
+                  color: $grey-text
+                  left: 93%
+
+        .rev-metrics-pie-wrapper
+          position: absolute
+          right: 0
+          height: 55.5vh
+          width: 31%
+
+          .rev-metrics-pie-container
+            height: 51.5vh
+            width: 100%
+            margin-top: 4vh
+
+            .rev-team-label-wrapper
+
+              .rev-team-label
+                font-size: 1.5vh
+                text-align: center
+                width: 100%
+                height: 3vh
+
+              .rev-team-name-wrapper
+                width: 100%
+                background: $blue-color
+                height: 6vh
+
+                &>div
+                  font-size: 3.5vh
+                  font-weight: 400
+                  color: #ffffff
+                  text-align: center
+                  line-height: 6vh
+
+          .rev-metrics-pie
+            width: 100%
+            height: 28.5vh
+            margin-top: 1.5vh
+
+            .rev-pie-label
+              font-size: 1.5vh
+              text-align: center
+              width: 100%
+              height: 3vh
+
+              &>div
+                line-height: 3vh
+
+          .pie-chart-footer
+            margin-top: 2.5vh
+            height: 8vh
+            width: 100%
+            font-size: 3vh
+            font-weight: 400
+            color: #000000
+            text-align: center
+  #rev-footer-wrapper
+    position: relative
+    background: $footer-background
+    width: $full-width
+    height: 10vh
+
+    .rev-footer-line
+      position: absolute
+      width: 100%
+      border-top: 2px solid $grey-text
+      top: 5vh
+
+    .rev-footer-scroller-wrapper
+      position: absolute
+      width: 90%
+      height: 5vh
+      background: #ffffff
+      left: 5%
+      top: 2.5vh
+      border: 2px solid $grey-text
+
+      .marquee-background
+        //width: 100%
+        height: 100%
+        position: relative
+        white-space: nowrap
+        overflow: hidden
+
+        &>div
+          position: absolute
+          display: inline-block
+          height: 5vh
+          overflow: hidden
+          animation: marquee 60s linear infinite
+          -webkit-animation: marquee 60s linear infinite
+          left: 100%
+
+          span
+            display: inline-block
+            height: 100%
+
+            &.user-label
+              background: $grey-text
+              color: #ffffff
+              font-size: 2.5vh
+              font-weight: 400
+              height: 100%
+
+              &>div
+                line-height: 5vh
+                margin: auto 15px
+
+            &.time-label
+              font-size: 2vh
+              font-weight: 100
+              height: 100%
+
+              &>div
+                line-height: 5vh
+                margin: auto 15px
+
+            &.post
+              font-size: 2.5vh
+              font-weight: 400
+              height: 100%
+
+              &>div
+                line-height: 5vh
+                margin-right: 30px
+                font-size: 2vh
+                color: #000000

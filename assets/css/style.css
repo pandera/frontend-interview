@@ -10,5 +10,639 @@
   src: local("../../fonts/Roboto-Regular-webfont");
   src: url("../../fonts/Roboto-Regular-webfont.svg#Roboto-Regular") format("svg");
   src: url("../../fonts/Roboto-Regular-webfont.otf") format("opentype"); }
+.rev-login-container {
+  height: 75vh;
+  width: 100%;
+  margin-top: 10vh;
+  border: 2px solid #ECF0F1; }
+  .rev-login-container .rev-logo-wrapper {
+    height: 25vh;
+    margin-top: 2.5vh;
+    width: 90%;
+    margin-left: 5%; }
+    .rev-login-container .rev-logo-wrapper #rev-cast-logo {
+      height: 100%;
+      width: 100%; }
+  .rev-login-container .rev-cast-login-wrapper {
+    width: 90%;
+    margin-left: 5%;
+    height: 10vh;
+    margin-top: 2.5vh; }
+    .rev-login-container .rev-cast-login-wrapper .rev-cast-login {
+      height: 100%;
+      width: 30%;
+      margin: 0 auto;
+      font-size: 4vh;
+      font-weight: 100;
+      text-align: center;
+      vertical-align: center; }
+  .rev-login-container #rev-cast-login-form {
+    width: 80%;
+    margin-left: 10%;
+    height: 30vh; }
+    .rev-login-container #rev-cast-login-form > input {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      outline: none;
+      box-shadow: none !important;
+      width: 100%;
+      height: 7vh;
+      margin-top: 2vh;
+      border-width: 0;
+      border: none;
+      border-bottom: 3px solid #ECF0F1;
+      text-align: center;
+      font-size: 3vh; }
+      .rev-login-container #rev-cast-login-form > input:-webkit-autofill, .rev-login-container #rev-cast-login-form > input:-webkit-autofill:hover, .rev-login-container #rev-cast-login-form > input:-webkit-autofill:focus, .rev-login-container #rev-cast-login-form > input:-webkit-autofill:active {
+        transition: background-color 5000s ease-in-out 0s;
+        -webkit-text-fill-color: #95A5A6; }
+      .rev-login-container #rev-cast-login-form > input::-webkit-input-placeholder {
+        text-align: center; }
+    .rev-login-container #rev-cast-login-form > button {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      border-width: 0;
+      border: none;
+      width: 100%;
+      height: 7vh;
+      margin-top: 2vh;
+      border-radius: 5px;
+      background: #95A5A6;
+      color: #ECF0F1;
+      box-shadow: 0px 2px 5px #7F8C8D; }
+  .rev-login-container .rev-cast-login-error {
+    color: red;
+    text-align: center; }
+  .rev-login-container .rev-cast-login-msg {
+    text-align: center; }
+
+@keyframes marquee {
+  0% {
+    left: 100%; }
+  100% {
+    left: -200%; } }
+@-webkit-keyframes marquee {
+  0% {
+    left: 100%; }
+  100% {
+    left: -200%; } }
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  color: #95A5A6;
+  position: relative;
+  overflow: hidden; }
+  body .rev-loading-overlay {
+    position: absolute;
+    background: #ffffff;
+    opacity: 0.75;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10; }
+    body .rev-loading-overlay .overlay-text-wrapper {
+      width: 100%;
+      height: 100%;
+      position: relative; }
+      body .rev-loading-overlay .overlay-text-wrapper .overlay-text {
+        width: 20%;
+        height: 20vh;
+        position: absolute;
+        left: 40%;
+        top: 30vh; }
+        body .rev-loading-overlay .overlay-text-wrapper .overlay-text .rev-gif-wrapper {
+          position: relative;
+          width: 100%;
+          height: 100%; }
+          body .rev-loading-overlay .overlay-text-wrapper .overlay-text .rev-gif-wrapper img {
+            position: absolute;
+            width: 68%;
+            left: 16%; }
+  body .rev-cursor {
+    cursor: all-scroll; }
+  body #rev-header-wrapper {
+    background: #ffffff;
+    width: 100%;
+    height: 25vh;
+    border-bottom: 2px solid #95A5A6; }
+    body #rev-header-wrapper .rev-section-wrapper {
+      width: 90%;
+      margin: 0 auto; }
+      body #rev-header-wrapper .rev-section-wrapper > div {
+        display: inline-block; }
+      body #rev-header-wrapper .rev-section-wrapper .rev-title-wrapper {
+        height: 25vh;
+        width: 63%; }
+        body #rev-header-wrapper .rev-section-wrapper .rev-title-wrapper .rev-logo-wrapper img {
+          max-width: 30vh;
+          height: 9vh;
+          margin-top: 4.5vh;
+          vertical-align: bottom; }
+        body #rev-header-wrapper .rev-section-wrapper .rev-title-wrapper .rev-logo-wrapper .rev-title {
+          font-size: 4vh; }
+          body #rev-header-wrapper .rev-section-wrapper .rev-title-wrapper .rev-logo-wrapper .rev-title div {
+            display: inline-block;
+            margin-left: 1em; }
+      body #rev-header-wrapper .rev-section-wrapper .rev-time-wrapper {
+        height: 25vh;
+        width: 25%; }
+        body #rev-header-wrapper .rev-section-wrapper .rev-time-wrapper .rev-counter-wrapper > div {
+          display: inline-block; }
+        body #rev-header-wrapper .rev-section-wrapper .rev-time-wrapper .rev-counter-wrapper .rev-time-title-wrapper {
+          font-size: 2.5vh; }
+          body #rev-header-wrapper .rev-section-wrapper .rev-time-wrapper .rev-counter-wrapper .rev-time-title-wrapper > div {
+            padding-top: 9.25vh;
+            padding-right: 1em; }
+        body #rev-header-wrapper .rev-section-wrapper .rev-time-wrapper .rev-counter-wrapper .rev-time-counter-wrapper {
+          position: absolute;
+          width: 5%;
+          height: 100%; }
+          body #rev-header-wrapper .rev-section-wrapper .rev-time-wrapper .rev-counter-wrapper .rev-time-counter-wrapper.first {
+            right: 19%; }
+          body #rev-header-wrapper .rev-section-wrapper .rev-time-wrapper .rev-counter-wrapper .rev-time-counter-wrapper.second {
+            right: 12%; }
+          body #rev-header-wrapper .rev-section-wrapper .rev-time-wrapper .rev-counter-wrapper .rev-time-counter-wrapper.third {
+            right: 5%; }
+          body #rev-header-wrapper .rev-section-wrapper .rev-time-wrapper .rev-counter-wrapper .rev-time-counter-wrapper .title {
+            width: 100%;
+            text-align: center;
+            font-weight: 400;
+            margin-top: 4vh;
+            font-size: 2vh; }
+          body #rev-header-wrapper .rev-section-wrapper .rev-time-wrapper .rev-counter-wrapper .rev-time-counter-wrapper .rev-circle {
+            background: #95A5A6;
+            color: #ffffff;
+            margin: 1vh auto;
+            height: 6.5vh;
+            width: 6.5vh;
+            border-radius: 7em; }
+            body #rev-header-wrapper .rev-section-wrapper .rev-time-wrapper .rev-counter-wrapper .rev-time-counter-wrapper .rev-circle .number-wrapper {
+              font-size: 4vh;
+              font-weight: 100;
+              margin: 1vh auto;
+              width: 100%;
+              line-height: 6.5vh;
+              text-align: center; }
+      body #rev-header-wrapper .rev-section-wrapper #rev-logout {
+        cursor: pointer;
+        position: fixed;
+        right: 0;
+        color: #d5d5d5; }
+        body #rev-header-wrapper .rev-section-wrapper #rev-logout:hover {
+          color: #95A5A6; }
+  body #rev-body-wrapper {
+    background: transparent;
+    width: 100%;
+    height: 72.5vh; }
+    body #rev-body-wrapper .rev-back-button {
+      position: absolute;
+      margin-left: 0.5%;
+      margin-top: 4vh;
+      height: 7vh;
+      width: 7vh;
+      background: #ffffff;
+      border-radius: 7vh;
+      border: 2px solid #95A5A6;
+      cursor: pointer; }
+      body #rev-body-wrapper .rev-back-button > i {
+        line-height: 6.5vh;
+        font-size: 6vh;
+        color: #95A5A6; }
+    body #rev-body-wrapper .rev-focus-wrapper {
+      position: relative;
+      height: 15vh;
+      background: transparent;
+      width: 90%;
+      margin: -7.5vh auto; }
+      body #rev-body-wrapper .rev-focus-wrapper .rev-focus-listview {
+        position: absolute;
+        height: 12vh;
+        background: #ffffff;
+        top: 1.5vh;
+        width: 42.5%;
+        border: 2px solid #95A5A6; }
+        body #rev-body-wrapper .rev-focus-wrapper .rev-focus-listview:hover {
+          background: #ECF0F1;
+          cursor: pointer; }
+        body #rev-body-wrapper .rev-focus-wrapper .rev-focus-listview .focus-detail-wrapper {
+          height: 6vh;
+          width: 90%;
+          margin-top: 3vh;
+          margin-left: 5%; }
+          body #rev-body-wrapper .rev-focus-wrapper .rev-focus-listview .focus-detail-wrapper > div {
+            display: inline-block;
+            color: #000000;
+            font-size: 3.5vh;
+            font-weight: 400;
+            position: absolute;
+            line-height: 6vh; }
+            body #rev-body-wrapper .rev-focus-wrapper .rev-focus-listview .focus-detail-wrapper > div.rev-focus-detail-image {
+              position: absolute;
+              height: 6vh;
+              background: #ffffff;
+              top: 3vh;
+              width: 6vh;
+              left: 14%;
+              border-radius: 8em; }
+            body #rev-body-wrapper .rev-focus-wrapper .rev-focus-listview .focus-detail-wrapper > div.name {
+              left: 30%; }
+            body #rev-body-wrapper .rev-focus-wrapper .rev-focus-listview .focus-detail-wrapper > div.points {
+              right: 5%; }
+      body #rev-body-wrapper .rev-focus-wrapper .rev-focus-image {
+        position: absolute;
+        height: 15vh;
+        background: #ffffff;
+        top: 0;
+        width: 15vh;
+        left: 50%;
+        border-radius: 8em; }
+      body #rev-body-wrapper .rev-focus-wrapper .rev-focus-details {
+        position: absolute;
+        background: #ffffff;
+        height: 7vh;
+        right: 0;
+        width: 38%;
+        border: 2px solid #95A5A6;
+        top: 4vh; }
+        body #rev-body-wrapper .rev-focus-wrapper .rev-focus-details > div {
+          display: inline-block; }
+        body #rev-body-wrapper .rev-focus-wrapper .rev-focus-details .title-wrapper {
+          height: 100%;
+          width: 55%;
+          float: left; }
+          body #rev-body-wrapper .rev-focus-wrapper .rev-focus-details .title-wrapper > div {
+            color: #000000;
+            font-size: 3vh;
+            font-weight: 300;
+            margin-left: 3.5%;
+            letter-spacing: 1px;
+            line-height: 7vh; }
+        body #rev-body-wrapper .rev-focus-wrapper .rev-focus-details .delta-wrapper {
+          background: #16A085;
+          color: #ffffff;
+          height: 100%;
+          width: 45%;
+          float: right; }
+          body #rev-body-wrapper .rev-focus-wrapper .rev-focus-details .delta-wrapper > div {
+            display: inline-block; }
+          body #rev-body-wrapper .rev-focus-wrapper .rev-focus-details .delta-wrapper .rank-wrapper {
+            font-size: 4vh;
+            font-weight: 400;
+            width: 45%;
+            float: left;
+            height: 100%; }
+            body #rev-body-wrapper .rev-focus-wrapper .rev-focus-details .delta-wrapper .rank-wrapper > div {
+              margin-left: 12.5%;
+              line-height: 7vh;
+              font-size: 3vh;
+              font-weight: 300; }
+          body #rev-body-wrapper .rev-focus-wrapper .rev-focus-details .delta-wrapper .change-box {
+            width: 55%;
+            height: 100%;
+            float: right; }
+            body #rev-body-wrapper .rev-focus-wrapper .rev-focus-details .delta-wrapper .change-box > div {
+              background: #ffffff;
+              height: 4vh;
+              width: 80%;
+              margin-top: 1.5vh; }
+              body #rev-body-wrapper .rev-focus-wrapper .rev-focus-details .delta-wrapper .change-box > div > div {
+                display: inline-block;
+                color: #16A085;
+                line-height: 4vh; }
+              body #rev-body-wrapper .rev-focus-wrapper .rev-focus-details .delta-wrapper .change-box > div .up-arrow {
+                height: 0;
+                width: 0;
+                border-left: 1vh solid transparent;
+                border-right: 1vh solid transparent;
+                border-bottom: 1vh solid #16A085;
+                position: absolute;
+                top: 40%;
+                margin-left: 2%; }
+              body #rev-body-wrapper .rev-focus-wrapper .rev-focus-details .delta-wrapper .change-box > div .down-arrow {
+                height: 0;
+                width: 0;
+                border-left: 1vh solid transparent;
+                border-right: 1vh solid transparent;
+                border-top: 1vh solid #C0392B;
+                position: absolute;
+                top: 50%;
+                margin-left: 2%; }
+              body #rev-body-wrapper .rev-focus-wrapper .rev-focus-details .delta-wrapper .change-box > div .rank {
+                font-size: 3vh;
+                float: right;
+                font-weight: 400;
+                padding-right: 20%; }
+                body #rev-body-wrapper .rev-focus-wrapper .rev-focus-details .delta-wrapper .change-box > div .rank.rev-down {
+                  color: #C0392B; }
+    body #rev-body-wrapper .rev-details-wrapper {
+      width: 90%;
+      margin: 0 auto;
+      height: 55.5vh;
+      margin-top: 7.5vh; }
+      body #rev-body-wrapper .rev-details-wrapper .rev-leaderboard-wrapper {
+        width: 40%;
+        height: 100%;
+        background: #ffffff;
+        display: inline-block; }
+        body #rev-body-wrapper .rev-details-wrapper .rev-leaderboard-wrapper .rev-leaderboard-entry {
+          width: 90%;
+          height: 8vh;
+          background: #ffffff;
+          margin: 0 auto; }
+          body #rev-body-wrapper .rev-details-wrapper .rev-leaderboard-wrapper .rev-leaderboard-entry:hover {
+            background: #ECF0F1;
+            cursor: pointer; }
+            body #rev-body-wrapper .rev-details-wrapper .rev-leaderboard-wrapper .rev-leaderboard-entry:hover .rev-entry-wrapper > div {
+              color: #000000; }
+          body #rev-body-wrapper .rev-details-wrapper .rev-leaderboard-wrapper .rev-leaderboard-entry .rev-entry-wrapper {
+            position: relative;
+            height: 6vh;
+            width: 90%;
+            margin-left: 5%;
+            margin-top: 1.5vh; }
+            body #rev-body-wrapper .rev-details-wrapper .rev-leaderboard-wrapper .rev-leaderboard-entry .rev-entry-wrapper > div {
+              display: inline-block;
+              color: #BDC3C7;
+              font-size: 3vh;
+              font-weight: 400;
+              line-height: 6vh;
+              position: absolute; }
+              body #rev-body-wrapper .rev-details-wrapper .rev-leaderboard-wrapper .rev-leaderboard-entry .rev-entry-wrapper > div.rev-entry-detail-image {
+                height: 4vh;
+                background: #ffffff;
+                top: 1vh;
+                width: 4vh;
+                left: 11%;
+                border-radius: 8em; }
+              body #rev-body-wrapper .rev-details-wrapper .rev-leaderboard-wrapper .rev-leaderboard-entry .rev-entry-wrapper > div.name {
+                left: 25%; }
+              body #rev-body-wrapper .rev-details-wrapper .rev-leaderboard-wrapper .rev-leaderboard-entry .rev-entry-wrapper > div.points {
+                right: 0%; }
+        body #rev-body-wrapper .rev-details-wrapper .rev-leaderboard-wrapper .rev-control-wrapper {
+          background: #95A5A6;
+          position: absolute;
+          height: 8vh;
+          width: 40%;
+          bottom: 0;
+          -webkit-transition: all 0.5s ease-in-out;
+          -moz-transition: all 0.5s ease-in-out;
+          -o-transition: all 0.5s ease-in-out; }
+          body #rev-body-wrapper .rev-details-wrapper .rev-leaderboard-wrapper .rev-control-wrapper.show {
+            cursor: default;
+            opacity: 0.75;
+            bottom: 10vh;
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out; }
+          body #rev-body-wrapper .rev-details-wrapper .rev-leaderboard-wrapper .rev-control-wrapper .rev-controls {
+            height: 100%;
+            width: 100%; }
+            body #rev-body-wrapper .rev-details-wrapper .rev-leaderboard-wrapper .rev-control-wrapper .rev-controls > div {
+              color: #ffffff;
+              display: inline-block; }
+              body #rev-body-wrapper .rev-details-wrapper .rev-leaderboard-wrapper .rev-control-wrapper .rev-controls > div.rev-control-label {
+                height: 100%;
+                width: 30%;
+                margin-left: 5%; }
+                body #rev-body-wrapper .rev-details-wrapper .rev-leaderboard-wrapper .rev-control-wrapper .rev-controls > div.rev-control-label > div {
+                  font-size: 3vh;
+                  line-height: 4vh;
+                  margin-top: 2vh; }
+              body #rev-body-wrapper .rev-details-wrapper .rev-leaderboard-wrapper .rev-control-wrapper .rev-controls > div.rev-control-btns {
+                float: right;
+                background: #2980B9;
+                width: 30%; }
+                body #rev-body-wrapper .rev-details-wrapper .rev-leaderboard-wrapper .rev-control-wrapper .rev-controls > div.rev-control-btns .rev-goto-btn {
+                  display: inline-block;
+                  color: #95A5A6;
+                  cursor: pointer;
+                  background: #ffffff;
+                  width: 10%;
+                  height: 4vh;
+                  margin-top: 2vh;
+                  position: absolute; }
+                  body #rev-body-wrapper .rev-details-wrapper .rev-leaderboard-wrapper .rev-control-wrapper .rev-controls > div.rev-control-btns .rev-goto-btn:first-child {
+                    right: 20%; }
+                  body #rev-body-wrapper .rev-details-wrapper .rev-leaderboard-wrapper .rev-control-wrapper .rev-controls > div.rev-control-btns .rev-goto-btn:last-child {
+                    right: 5%; }
+                  body #rev-body-wrapper .rev-details-wrapper .rev-leaderboard-wrapper .rev-control-wrapper .rev-controls > div.rev-control-btns .rev-goto-btn div {
+                    text-transform: uppercase;
+                    width: 100%;
+                    text-align: center; }
+                    body #rev-body-wrapper .rev-details-wrapper .rev-leaderboard-wrapper .rev-control-wrapper .rev-controls > div.rev-control-btns .rev-goto-btn div.rev-up-arrow-grey {
+                      height: 0;
+                      width: 0;
+                      border-left: 10px solid transparent;
+                      border-right: 10px solid transparent;
+                      border-bottom: 10px solid #95A5A6;
+                      position: absolute;
+                      left: 50%;
+                      margin-left: -10px; }
+                    body #rev-body-wrapper .rev-details-wrapper .rev-leaderboard-wrapper .rev-control-wrapper .rev-controls > div.rev-control-btns .rev-goto-btn div.rev-down-arrow-grey {
+                      height: 0;
+                      width: 0;
+                      border-left: 10px solid transparent;
+                      border-right: 10px solid transparent;
+                      border-top: 10px solid #95A5A6;
+                      position: absolute;
+                      left: 50%;
+                      margin-left: -10px; }
+      body #rev-body-wrapper .rev-details-wrapper .rev-metrics-wrapper {
+        position: relative;
+        display: inline-block;
+        height: 100%;
+        width: 55%;
+        float: right; }
+        body #rev-body-wrapper .rev-details-wrapper .rev-metrics-wrapper .rev-metrics-table-wrapper {
+          position: absolute;
+          height: 55.5vh;
+          width: 79%; }
+          body #rev-body-wrapper .rev-details-wrapper .rev-metrics-wrapper .rev-metrics-table-wrapper .rev-metrics-table {
+            height: 51.5vh;
+            width: 81%;
+            margin-left: 9%;
+            margin-top: 4vh; }
+            body #rev-body-wrapper .rev-details-wrapper .rev-metrics-wrapper .rev-metrics-table-wrapper .rev-metrics-table .rev-table-header {
+              position: relative;
+              width: 80%;
+              height: 3vh; }
+              body #rev-body-wrapper .rev-details-wrapper .rev-metrics-wrapper .rev-metrics-table-wrapper .rev-metrics-table .rev-table-header > div {
+                font-weight: 100;
+                font-size: 1.5vh;
+                display: inline-block;
+                position: absolute;
+                white-space: nowrap; }
+                body #rev-body-wrapper .rev-details-wrapper .rev-metrics-wrapper .rev-metrics-table-wrapper .rev-metrics-table .rev-table-header > div:first-child {
+                  left: 5%; }
+                body #rev-body-wrapper .rev-details-wrapper .rev-metrics-wrapper .rev-metrics-table-wrapper .rev-metrics-table .rev-table-header > div:nth-child(2) {
+                  left: 68%; }
+                body #rev-body-wrapper .rev-details-wrapper .rev-metrics-wrapper .rev-metrics-table-wrapper .rev-metrics-table .rev-table-header > div:last-child {
+                  left: 96%; }
+            body #rev-body-wrapper .rev-details-wrapper .rev-metrics-wrapper .rev-metrics-table-wrapper .rev-metrics-table .rev-table-row {
+              position: relative;
+              background: #ECF0F1;
+              width: 70%;
+              height: 6vh; }
+              body #rev-body-wrapper .rev-details-wrapper .rev-metrics-wrapper .rev-metrics-table-wrapper .rev-metrics-table .rev-table-row:not(.first) {
+                margin-top: 1.5vh; }
+              body #rev-body-wrapper .rev-details-wrapper .rev-metrics-wrapper .rev-metrics-table-wrapper .rev-metrics-table .rev-table-row .rev-metric-bar {
+                position: absolute;
+                background: #16A085;
+                height: 100%;
+                width: 50%; }
+              body #rev-body-wrapper .rev-details-wrapper .rev-metrics-wrapper .rev-metrics-table-wrapper .rev-metrics-table .rev-table-row > div:not(.rev-metric-bar) {
+                display: inline-block;
+                position: absolute; }
+                body #rev-body-wrapper .rev-details-wrapper .rev-metrics-wrapper .rev-metrics-table-wrapper .rev-metrics-table .rev-table-row > div:not(.rev-metric-bar) > div {
+                  position: absolute; }
+                body #rev-body-wrapper .rev-details-wrapper .rev-metrics-wrapper .rev-metrics-table-wrapper .rev-metrics-table .rev-table-row > div:not(.rev-metric-bar).metric-label-box {
+                  left: 5%; }
+                body #rev-body-wrapper .rev-details-wrapper .rev-metrics-wrapper .rev-metrics-table-wrapper .rev-metrics-table .rev-table-row > div:not(.rev-metric-bar).metric-points-box {
+                  left: 75%; }
+                body #rev-body-wrapper .rev-details-wrapper .rev-metrics-wrapper .rev-metrics-table-wrapper .rev-metrics-table .rev-table-row > div:not(.rev-metric-bar).metric-avg-box {
+                  left: 105%; }
+                body #rev-body-wrapper .rev-details-wrapper .rev-metrics-wrapper .rev-metrics-table-wrapper .rev-metrics-table .rev-table-row > div:not(.rev-metric-bar) > .box-wrapper {
+                  height: 3.5vh;
+                  margin-top: 1.25vh;
+                  background: #ffffff;
+                  border: 1px solid #95A5A6;
+                  border-radius: 2px;
+                  white-space: nowrap; }
+                  body #rev-body-wrapper .rev-details-wrapper .rev-metrics-wrapper .rev-metrics-table-wrapper .rev-metrics-table .rev-table-row > div:not(.rev-metric-bar) > .box-wrapper.no-border {
+                    border: none; }
+                    body #rev-body-wrapper .rev-details-wrapper .rev-metrics-wrapper .rev-metrics-table-wrapper .rev-metrics-table .rev-table-row > div:not(.rev-metric-bar) > .box-wrapper.no-border > div {
+                      color: #95A5A6; }
+                  body #rev-body-wrapper .rev-details-wrapper .rev-metrics-wrapper .rev-metrics-table-wrapper .rev-metrics-table .rev-table-row > div:not(.rev-metric-bar) > .box-wrapper > div {
+                    color: #000000;
+                    font-size: 1.5vh;
+                    font-weight: 400;
+                    margin: 0 15px;
+                    line-height: 3.5vh; }
+            body #rev-body-wrapper .rev-details-wrapper .rev-metrics-wrapper .rev-metrics-table-wrapper .rev-metrics-table .rev-table-footer {
+              position: relative;
+              height: 8vh;
+              width: 80%;
+              margin-top: 1.25vh; }
+              body #rev-body-wrapper .rev-details-wrapper .rev-metrics-wrapper .rev-metrics-table-wrapper .rev-metrics-table .rev-table-footer > div {
+                display: inline-block;
+                position: absolute;
+                font-weight: 400;
+                font-size: 3vh;
+                margin-top: 1vh;
+                color: #000000; }
+                body #rev-body-wrapper .rev-details-wrapper .rev-metrics-wrapper .rev-metrics-table-wrapper .rev-metrics-table .rev-table-footer > div:first-child {
+                  left: 5%; }
+                body #rev-body-wrapper .rev-details-wrapper .rev-metrics-wrapper .rev-metrics-table-wrapper .rev-metrics-table .rev-table-footer > div:nth-child(2) {
+                  left: 66%; }
+                body #rev-body-wrapper .rev-details-wrapper .rev-metrics-wrapper .rev-metrics-table-wrapper .rev-metrics-table .rev-table-footer > div:last-child {
+                  font-size: 2.5vh;
+                  margin-top: 1.25vh;
+                  color: #95A5A6;
+                  left: 93%; }
+        body #rev-body-wrapper .rev-details-wrapper .rev-metrics-wrapper .rev-metrics-pie-wrapper {
+          position: absolute;
+          right: 0;
+          height: 55.5vh;
+          width: 31%; }
+          body #rev-body-wrapper .rev-details-wrapper .rev-metrics-wrapper .rev-metrics-pie-wrapper .rev-metrics-pie-container {
+            height: 51.5vh;
+            width: 100%;
+            margin-top: 4vh; }
+            body #rev-body-wrapper .rev-details-wrapper .rev-metrics-wrapper .rev-metrics-pie-wrapper .rev-metrics-pie-container .rev-team-label-wrapper .rev-team-label {
+              font-size: 1.5vh;
+              text-align: center;
+              width: 100%;
+              height: 3vh; }
+            body #rev-body-wrapper .rev-details-wrapper .rev-metrics-wrapper .rev-metrics-pie-wrapper .rev-metrics-pie-container .rev-team-label-wrapper .rev-team-name-wrapper {
+              width: 100%;
+              background: #2980B9;
+              height: 6vh; }
+              body #rev-body-wrapper .rev-details-wrapper .rev-metrics-wrapper .rev-metrics-pie-wrapper .rev-metrics-pie-container .rev-team-label-wrapper .rev-team-name-wrapper > div {
+                font-size: 3.5vh;
+                font-weight: 400;
+                color: #ffffff;
+                text-align: center;
+                line-height: 6vh; }
+          body #rev-body-wrapper .rev-details-wrapper .rev-metrics-wrapper .rev-metrics-pie-wrapper .rev-metrics-pie {
+            width: 100%;
+            height: 28.5vh;
+            margin-top: 1.5vh; }
+            body #rev-body-wrapper .rev-details-wrapper .rev-metrics-wrapper .rev-metrics-pie-wrapper .rev-metrics-pie .rev-pie-label {
+              font-size: 1.5vh;
+              text-align: center;
+              width: 100%;
+              height: 3vh; }
+              body #rev-body-wrapper .rev-details-wrapper .rev-metrics-wrapper .rev-metrics-pie-wrapper .rev-metrics-pie .rev-pie-label > div {
+                line-height: 3vh; }
+          body #rev-body-wrapper .rev-details-wrapper .rev-metrics-wrapper .rev-metrics-pie-wrapper .pie-chart-footer {
+            margin-top: 2.5vh;
+            height: 8vh;
+            width: 100%;
+            font-size: 3vh;
+            font-weight: 400;
+            color: #000000;
+            text-align: center; }
+  body #rev-footer-wrapper {
+    position: relative;
+    background: #ECF0F1;
+    width: 100%;
+    height: 10vh; }
+    body #rev-footer-wrapper .rev-footer-line {
+      position: absolute;
+      width: 100%;
+      border-top: 2px solid #95A5A6;
+      top: 5vh; }
+    body #rev-footer-wrapper .rev-footer-scroller-wrapper {
+      position: absolute;
+      width: 90%;
+      height: 5vh;
+      background: #ffffff;
+      left: 5%;
+      top: 2.5vh;
+      border: 2px solid #95A5A6; }
+      body #rev-footer-wrapper .rev-footer-scroller-wrapper .marquee-background {
+        height: 100%;
+        position: relative;
+        white-space: nowrap;
+        overflow: hidden; }
+        body #rev-footer-wrapper .rev-footer-scroller-wrapper .marquee-background > div {
+          position: absolute;
+          display: inline-block;
+          height: 5vh;
+          overflow: hidden;
+          animation: marquee 60s linear infinite;
+          -webkit-animation: marquee 60s linear infinite;
+          left: 100%; }
+          body #rev-footer-wrapper .rev-footer-scroller-wrapper .marquee-background > div span {
+            display: inline-block;
+            height: 100%; }
+            body #rev-footer-wrapper .rev-footer-scroller-wrapper .marquee-background > div span.user-label {
+              background: #95A5A6;
+              color: #ffffff;
+              font-size: 2.5vh;
+              font-weight: 400;
+              height: 100%; }
+              body #rev-footer-wrapper .rev-footer-scroller-wrapper .marquee-background > div span.user-label > div {
+                line-height: 5vh;
+                margin: auto 15px; }
+            body #rev-footer-wrapper .rev-footer-scroller-wrapper .marquee-background > div span.time-label {
+              font-size: 2vh;
+              font-weight: 100;
+              height: 100%; }
+              body #rev-footer-wrapper .rev-footer-scroller-wrapper .marquee-background > div span.time-label > div {
+                line-height: 5vh;
+                margin: auto 15px; }
+            body #rev-footer-wrapper .rev-footer-scroller-wrapper .marquee-background > div span.post {
+              font-size: 2.5vh;
+              font-weight: 400;
+              height: 100%; }
+              body #rev-footer-wrapper .rev-footer-scroller-wrapper .marquee-background > div span.post > div {
+                line-height: 5vh;
+                margin-right: 30px;
+                font-size: 2vh;
+                color: #000000; }
 
 /*# sourceMappingURL=compiled.css.map */
