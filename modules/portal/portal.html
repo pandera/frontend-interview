@@ -1,1 +1,212 @@
-<div>Portal Loaded</div>
+
+<div id="rev-content-wrapper">
+    <div id="rev-header-wrapper">
+        <div class="rev-section-wrapper row">
+            <div class="rev-title-wrapper">
+                <div class="rev-logo-wrapper">
+                    <img src="{{portal.configData.logo}}"/>
+                    <span class="rev-title">
+                        <div>{{portal.configData.title}}</div>
+                    </span>
+                </div>
+            </div>
+            <div class="rev-time-wrapper">
+                <div class="rev-counter-wrapper">
+                    <div class="rev-time-title-wrapper">
+                        <div>Time Remaining:</div>
+                    </div>
+                    <div class="rev-time-counter-wrapper first">
+                        <div class="title">MONTHS</div>
+                        <div class="rev-circle">
+                            <div class="number-wrapper">{{portal.configData.months}}</div>
+                        </div>
+                    </div>
+                    <div class="rev-time-counter-wrapper second">
+                        <div class="title">WEEKS</div>
+                        <div class="rev-circle">
+                            <div class="number-wrapper">{{portal.configData.weeks}}</div>
+                        </div>
+                    </div>
+                    <div class="rev-time-counter-wrapper third">
+                        <div class="title">DAYS</div>
+                        <div class="rev-circle">
+                            <div class="number-wrapper">{{portal.configData.days}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div id=rev-logout ng-click="portal.logout()"><i class="material-icons">power_settings_new</i></div> -->
+        </div>
+    </div>
+    <div id="rev-body-wrapper">
+        <div ng-if="!portal.isViewingTopLevel"
+             class="rev-back-button"
+             ng-click="portal.init()">
+            <i class="material-icons">arrow_back</i>
+        </div>
+        <div class="rev-focus-wrapper">
+            <div class="rev-focus-listview rev-cursor"
+                 ng-mouseenter="portal.stopTimer()"
+                 ng-mouseleave="portal.initTimer()"
+                 ng-mouse-wheel-up="portal.moveListUp()"
+                 ng-mouse-wheel-down="portal.moveListDown()"
+                 ng-click="portal.leaderboardClickHandler(portal.focusUserIndex)">
+                <div class="focus-detail-wrapper">
+                    <div class="rank">{{portal.focusUserIndex + 1}}</div>
+                    <div class="rev-focus-detail-image" style="background: url({{portal.leaderboard[portal.focusUserIndex].image}}) no-repeat; background-position: center; background-size: 8vh 8vh;">
+                    </div>
+                    <div class="name">{{portal.leaderboard[portal.focusUserIndex].name}}</div>
+                    <div class="points">{{portal.leaderboard[portal.focusUserIndex].totalPoints | metricsFilter}}</div>
+                </div>
+            </div>
+            <div class="rev-focus-image" style="background: url({{portal.leaderboard[portal.focusUserIndex].image}}) no-repeat; background-position: center; background-size: 15vh 15vh;">
+            </div>
+            <div class="rev-focus-details">
+                <div class="title-wrapper">
+                    <div>Score Details</div>
+                </div>
+                <div class="delta-wrapper" style="background: {{portal.getRankSectionColor(portal.focusUserIndex + 1, portal.leaderboard.length)}}">
+                    <div class="rank-wrapper">
+                        <div>{{portal.ordinal_suffix_of(portal.focusUserIndex + 1)}}</div>
+                    </div>
+                    <div class="change-box">
+                        <div ng-if="portal.leaderboard[portal.focusUserIndex].previousRank > portal.leaderboard[portal.focusUserIndex].rank">
+                            <div class="up-arrow"></div>
+                            <div class="rank rev-up">+ {{portal.leaderboard[portal.focusUserIndex].previousRank - portal.leaderboard[portal.focusUserIndex].rank}}</div>
+                        </div>
+                        <div ng-if="portal.leaderboard[portal.focusUserIndex].previousRank < portal.leaderboard[portal.focusUserIndex].rank">
+                            <div class="down-arrow"></div>
+                            <div class="rank rev-down">- {{portal.leaderboard[portal.focusUserIndex].rank - portal.leaderboard[portal.focusUserIndex].previousRank}}</div>
+                        </div>
+                        <div ng-if="portal.leaderboard[portal.focusUserIndex].previousRank == portal.leaderboard[portal.focusUserIndex].rank">
+                            <div class="rank"> - - - - - </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rev-details-wrapper">
+            <div class="rev-leaderboard-wrapper rev-cursor"
+                 ng-mouseenter="portal.stopTimer()"
+                 ng-mouseleave="portal.initTimer()"
+                 ng-mouse-wheel-up="portal.moveListUp()"
+                 ng-mouse-wheel-down="portal.moveListDown()">
+                <div ng-repeat="user in portal.createRange(1, 6) track by $index"
+                     class="rev-leaderboard-entry"
+                     ng-click="portal.leaderboardClickHandler((portal.focusUserIndex + $index + 1) % portal.leaderboard.length)">
+                    <div class="rev-entry-wrapper">
+                        <div class="rank">{{((portal.focusUserIndex + $index + 1) % portal.leaderboard.length) + 1}}</div>
+                        <div class="rev-entry-detail-image" style="background: url({{portal.leaderboard[((portal.focusUserIndex + $index + 1) % portal.leaderboard.length)].image}}) no-repeat; background-position: center; background-size:4vh 4vh;">
+                        </div>
+                        <div class="name">{{portal.leaderboard[((portal.focusUserIndex + $index + 1) % portal.leaderboard.length)].name}}</div>
+                        <div class="points">{{portal.leaderboard[((portal.focusUserIndex + $index + 1) % portal.leaderboard.length)].totalPoints | metricsFilter}}</div>
+                    </div>
+                </div>
+                <div ng-class="{show: portal.isHovering}" class="rev-control-wrapper">
+                    <div class="rev-controls">
+                        <div class="rev-control-label">
+                            <div>Go to</div>
+                        </div>
+                        <div class="rev-control-btns">
+                            <div class="rev-goto-btn"
+                                 ng-click="portal.gotoTop()">
+                                <div>top</div>
+                                <div class="rev-up-arrow-grey"></div>
+                            </div>
+                            <div class="rev-goto-btn"
+                                 ng-click="portal.gotoBottom()">
+                                <div>end</div>
+                                <div class="rev-down-arrow-grey"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="rev-metrics-wrapper">
+                <div class="rev-metrics-table-wrapper">
+                    <div class="rev-metrics-table">
+                        <div class="rev-table-header">
+                            <div>METRIC</div>
+                            <div>TOTAL</div>
+                            <div>AVG</div>
+                        </div>
+                        <div ng-repeat="metric in portal.leaderboard[portal.focusUserIndex].metrics track by $index"
+                             class="rev-table-row"
+                             ng-class="{'first':($index == 0)}"
+                             ng-style="{{portal.getRowStyle(portal.leaderboard[portal.focusUserIndex].metrics.length, $index)}}">
+                            <div class="rev-metric-bar"
+                                 style="width:{{metric.percent}}%; background:{{portal.getMetricSectionColor(metric.percent)}};"></div>
+                            <div class="metric-label-box">
+                                <div class="box-wrapper" ng-style="{{portal.getTopMarginStyle(portal.leaderboard[portal.focusUserIndex].metrics.length)}}">
+                                    <div>{{metric.name}}</div>
+                                </div>
+                            </div>
+                            <div class="metric-points-box">
+                                <div class="box-wrapper" ng-style="{{portal.getTopMarginStyle(portal.leaderboard[portal.focusUserIndex].metrics.length)}}">
+                                    <div>{{metric.points | metricsFilter}}</div>
+                                </div>
+                            </div>
+                            <div class="metric-avg-box">
+                                <div class="box-wrapper no-border" ng-style="{{portal.getTopMarginStyle(portal.leaderboard[portal.focusUserIndex].metrics.length)}}">
+                                    <div>{{metric.teamAverage | metricsFilter}}</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rev-table-footer" style="margin-top: {{portal.getFooterTopMarginStyle(portal.leaderboard[portal.focusUserIndex].metrics.length)}}">
+                            <div>Score</div>
+                            <div>{{portal.leaderboard[portal.focusUserIndex].totalPoints | metricsFilter}}</div>
+                            <div>{{portal.teamAverageScore | metricsFilter}}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rev-metrics-pie-wrapper">
+                    <div class="rev-metrics-pie-container">
+                        <div class="rev-team-label-wrapper">
+                            <div class="rev-team-label">
+                                <div ng-show="portal.isViewingTopLevel">DEPARTMENT</div>
+                                <div ng-show="!portal.isViewingTopLevel">TEAM</div>
+                            </div>
+                            <div class="rev-team-name-wrapper">
+                                <div>{{portal.leaderboard[portal.focusUserIndex].teamName || 'Coding'}}</div>
+                            </div>
+                        </div>
+                        <div class="rev-metrics-pie">
+                            <div class="rev-pie-label">
+                                <div>CONTRIBUTION</div>
+                            </div>
+                            <div id="pie-chart-wrapper">
+                                <highchart style="height: 25.5vh;" config="portal.chartConfig"></highchart>
+                            </div>
+                        </div>
+                        <div class="pie-chart-footer">
+                            {{portal.leaderboard[portal.focusUserIndex].contribution | metricsFilter}}%
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="rev-footer-wrapper">
+        <div class="rev-footer-line"></div>
+        <div class="rev-footer-scroller-wrapper">
+            <div class="marquee-background">
+                <div>
+               <span ng-repeat="chatter in portal.chatterFeed track by $index">
+                   <span class="user-label"><div>{{chatter.username}}</div></span>
+                   <span class="time-label"><div>({{chatter.time|timeago}})</div></span>
+                   <span class="post"><div>{{chatter.post}}</div></span>
+               </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-show="portal.isLoading" class="rev-loading-overlay">
+    <div class="overlay-text-wrapper">
+        <div class="overlay-text">
+            <div class="rev-gif-wrapper">
+                <img src="./assets/img/loading.gif"/>
+            </div>
+        </div>
+    </div>
+</div>
