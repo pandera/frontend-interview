@@ -40841,7 +40841,7 @@ angular.module('REVCast', [
     .filter("timeago", function () {
         return function (a, b) {
             var c, d = function (a, b, c) {
-                var d = $.isFunction(a) ? a(b, i) : a
+                var d = typeof a === 'function' ? a(b, i) : a
                     , e = c.numbers && c.numbers[b] || b;
                 return d.replace(/%d/i, e)
             }, e = (new Date).getTime(), f = new Date(a).getTime(), g = b || !1, h = {
@@ -40879,12 +40879,11 @@ angular.module('REVCast', [
 		var APIManager = {};
 
 		APIManager.loadLeaderboardData = function(vertical){
-            return $http.get("./modules/webService/mock_data/leaderboard.json");
-			//if(vertical === ""){
-			//	return $http.get("./modules/webService/mock_data/leaderboard.json");
-			//}else{
-			//	return $http.get("./modules/webService/mock_data/leaderboard_"+vertical+".json");
-			//}
+			if(vertical === ""){
+				return $http.get("./modules/webService/mock_data/leaderboard.json");
+			}else{
+				return $http.get("./modules/webService/mock_data/leaderboard_"+vertical+".json");
+			}
 		};
 
 		APIManager.loadChatterData = function(vertical){
